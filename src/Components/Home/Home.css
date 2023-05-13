@@ -32,15 +32,6 @@
     max-height: 300px;
 }
 
-
-
-@media screen and (min-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
 @media screen and (max-width: 1200px) {
     .home {
         justify-content: flex-start;

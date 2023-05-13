@@ -1,6 +1,7 @@
 
 import './App.css'
 import Home from './Components/Home/Home'
+import RightSide from './Components/RightSide/RightSide'
 import SideBar from './Components/SideBar/SideBar'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <div className="AppGlass">
         <SideBar/>
         <Home/>
+        <RightSide/>
       </div>
 
     </div>
