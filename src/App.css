@@ -13,7 +13,6 @@
 }
 
 .App {
-  /* padding: 0.5rem 3.5rem; */
   color: var(--black);
   background: linear-gradient(
     106.37deg,
@@ -35,7 +34,7 @@
   background: var(--glass);
   border-radius: 2rem;
   gap: 16px;
-  grid-template-columns: 15rem auto 24rem;
+  grid-template-columns: 15rem auto;
   overflow: hidden;
 }
 
