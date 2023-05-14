@@ -17,7 +17,7 @@ function SideBar() {
     return (
         <div className="sidebar">
             <div className="logo">
-                <img src={Logo} alt='' />
+                <img src={Logo} alt='' onClick={()=> navigate('/')} />
             </div>
             <div className="menu">
                 {SideBarData.map((item, index) => {
