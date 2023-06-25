@@ -85,8 +85,6 @@ const WinProbability = () => {
 
   const handleCheckWinProbability = async (matchId) => {
     console.log(matchId)
-    console.log(inning)
-    console.log(overId)
     setMatchId(matchId)
     await fetchWinPredictionData(matchId);
   };
