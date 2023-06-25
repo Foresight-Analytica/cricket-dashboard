@@ -53,7 +53,6 @@ export const fetchWinPredictionSecondInningOverById = async (matchId, overId) =>
   try {
     const response = await axios.get(`${BASE_URL}/match/s-inning-win/${matchId}/${overId}`);
     return response.data.Win_second;
-    console.log(response)
   } catch (error) {
     console.error(error);
     throw error;
