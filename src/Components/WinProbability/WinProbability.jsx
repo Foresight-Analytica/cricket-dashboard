@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './WinProbability.css'
 import { Chart } from "react-google-charts";
 import {
@@ -143,7 +143,7 @@ const WinProbability = () => {
           </select>
           <label className='card-subtitle'>Select Over No:</label>
           <select id="dropdown" value={overId} onChange={(e) => handleOptionChange(e.target.value, matchId)}>
-            <option value="0" id='0'>0</option>
+            <option value='null' id='0'>0</option>
             <option value="1" id='1'>1</option>
             <option value="2" id='2'>2</option>
             <option value="3" id="3">3</option>
