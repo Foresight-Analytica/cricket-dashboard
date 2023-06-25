@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './WinProbability.css'
 import { Chart } from "react-google-charts";
 import {
@@ -16,21 +16,21 @@ const WinProbability = () => {
 
 
   const [matchId, setMatchId] = useState(1298177);  //match ID
-  const [overId, setOverId] = useState('0');  //match ID
+  const [overId, setOverId] = useState(null);  //match ID
   const [winPrediction, setWinPrediction] = useState(1);
   const [inning, setInning] = useState();
 
   useEffect(() => {
-    if (matchId !== null && overId == '0') {
+    if (matchId !== null && overId == null) {
       console.log('no')
       fetchWinPredictionData(matchId);
     }
-    if (matchId !== null && overId != '0') {
+    if (matchId !== null && overId != null) {
       console.log('over')
       fetchWinOverByOver(matchId, overId);
     }
 
-  }, [matchId, inning]);
+  }, [matchId, overId, inning]);
 
   const fetchWinOverByOver = async (matchId, overId) => {
     console.log('x')
@@ -58,18 +58,18 @@ const WinProbability = () => {
       if (inning == null) {
         alert("Set the inning first")
       }
-      if (inning == 1 && overId == '0' ) {
+      if (inning == 1 && overId == null ) {
         const prediction = await fetchWinPredictionBeforeMatchStarts(matchId);
         setWinPrediction(prediction);
         console.log('b')
       }
 
-      if (inning == 2 && matchId == 1298179 && overId == '0') {
+      if (inning == 2 && matchId == 1298179 && overId == null) {
         setWinPrediction(78.77);
         console.log('c')
       }
 
-      if (inning == 2 && matchId == 1298177 && overId == '0') {
+      if (inning == 2 && matchId == 1298177 && overId == null) {
         const prediction = await fetchSecondInningWin(matchId, 1)
         setWinPrediction(prediction);
         console.log('d')
@@ -85,6 +85,8 @@ const WinProbability = () => {
 
   const handleCheckWinProbability = async (matchId) => {
     console.log(matchId)
+    console.log(inning)
+    console.log(overId)
     setMatchId(matchId)
     await fetchWinPredictionData(matchId);
   };
@@ -141,7 +143,7 @@ const WinProbability = () => {
           </select>
           <label className='card-subtitle'>Select Over No:</label>
           <select id="dropdown" value={overId} onChange={(e) => handleOptionChange(e.target.value, matchId)}>
-            <option value="0" id='0'>Select Over</option>
+            <option value="0" id='0'>0</option>
             <option value="1" id='1'>1</option>
             <option value="2" id='2'>2</option>
             <option value="3" id="3">3</option>
