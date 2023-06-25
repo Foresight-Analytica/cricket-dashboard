@@ -2,6 +2,17 @@ import axios from 'axios';
 
 const BASE_URL = 'http://127.0.0.1:8000';  // FastAPI backend URL
 
+//fetch 2nd inning 
+export const fetchSecondInningWin = async (matchId, overId) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/match/s-inning-win/${matchId}/${overId}`);
+    console.log(response)
+    return response.data.Win_second;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
 // Fetch match by ID before start
 export const fetchMatchByIdBeforeStart = async (matchId) => {
   try {
@@ -25,22 +36,24 @@ export const fetchWinPredictionBeforeMatchStarts = async (matchId) => {
   }
 };
 
-// Fetch first inning over by ID
-export const fetchFirstInningOverById = async (matchId, overId) => {
-  try {
-    const response = await axios.get(`${BASE_URL}/match/f-inning-over/${matchId}/${overId}`);
-    return response.data;
-  } catch (error) {
-    console.error(error);
-    throw error;
-  }
-};
 
 // Fetch win prediction for first inning over
 export const fetchWinPredictionFirstInningOverById = async (matchId, overId) => {
   try {
     const response = await axios.get(`${BASE_URL}/match/f-inning-win/${matchId}/${overId}`);
     return response.data.Win;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
+// Fetch win prediction for second inning over
+export const fetchWinPredictionSecondInningOverById = async (matchId, overId) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/match/s-inning-win/${matchId}/${overId}`);
+    return response.data.Win_second;
+    console.log(response)
   } catch (error) {
     console.error(error);
     throw error;
