@@ -33,8 +33,9 @@ const GroundEffect = () => {
 
 
   useEffect(() => {
+    setruns('0')
 
-  }, [])
+  }, [ground,opponentTeam,playerCountry,playerName])
 
 
 
@@ -53,7 +54,6 @@ const GroundEffect = () => {
       const text = await response.text();
       const parsedData = Papa.parse(text).data;
       const columns = parsedData[0];
-      console.log(columns)
       const extractedData = parsedData.filter((row) => {
         return Object.entries(filteringConditions).every(([key, value]) => {
           const columnIndex = columns.indexOf(key);
@@ -61,7 +61,8 @@ const GroundEffect = () => {
           return rowValue === value;
         });
       });
-      const extractedRow = extractedData[extractedData.length - 1];
+      const extractedRow = extractedData[0];
+      console.log(extractedRow)
       const Player_Country_Afghanistan = extractedRow[3] === 'Afghanistan' ? 1 : 0
       const Player_Country_Australia = extractedRow[3] === 'Australia' ? 1 : 0
       const Player_Country_Bangladesh = extractedRow[3] === 'Bangladesh' ? 1 : 0
@@ -145,6 +146,7 @@ const GroundEffect = () => {
   };
 
   const fetchBatsmanScore = async () => {
+   
     const data = await extractDataFromCSV()
     const result = await getGroundBatsmanScore(data)
     setruns(result)
