@@ -1,15 +1,15 @@
 import React from 'react'
-import './HighImpactMoment.css'
+import './HighImpactMoment.css' 
 
 const HighImpactMoment = () => {
   return (
     <div className="page-content">
-      <div className="card">
+      <div className="card-high-impact-area">
         <div className="card-title">High Impact Moment</div>
         <div className="card-content">Content of the High Impact Moment card</div>
       </div>
 
-      <div className="card">
+      <div className="card-high-impact-area">
         <div className="card-title">Wicket Statistics</div>
         <div className="card-content">
           <div className="row">

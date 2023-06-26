@@ -1,83 +1,125 @@
 .container {
-    display: flex;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  }
-  
-  .column {
-    flex: 1;
-    padding: 10px;
-    align-items: center;
-  }
-  
-  .card {
-    width: calc(70% - 10px); /* Adjust the width as needed */
-    margin: 10px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    display: flex;
-  flex-wrap: wrap;
-  }
+}
 
-  .card-content {
-    display: flex;
-    flex: 1;
-  }
+.column {
+  flex: 1;
+  padding: 10px;
+  align-items: center;
+}
+.column-ground-effect {
+  flex: 1;
+  padding: 10px;
+  align-items: center;
+}
 
+.card-ground-effect {
+  width: 87%;
+  margin-top: 1rem;
+  background-color: var(--cardBg) !important;
+  padding: 20px;
+  border-radius: 1rem;
+  height: 80%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
 
-  
-  .card-title {
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .card-subtitle {
-    font-size: 20px;
+.card-content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
 
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
+.card-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
-  select,
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  .ground-name{
-    font-size:40px;
-    color: #05299e;
+.card-subtitle {
+  font-size: 20px;
 
-  }
-  .circle {
-    display: flex;
-    height: 200px;
-  width: 200px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.ground-name {
+  font-size: 40px;
+  color: #05299e;
+}
+.circle-container{
+  justify-content: center;
+  align-items: center;
+  padding-left:4rem;
+}
+.circle {
+  display: flex;
+  height: 400px;
+  width: 400px;
   background-color: rgb(199, 220, 236);
   border-radius: 50%;
   border-color: #05299e;
-  }
-  .Runs{
-    margin: auto;
-    font-size: 60px;
-    font-weight: bold;
-    color: #45a049;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
+}
+.Runs {
+  margin: auto;
+  font-size: 60px;
+  font-weight: bold;
+  color: #45a049;
+}
+
+.button-predict {
+  padding: 20px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.player-name-input {
+  width: 100% !important;
+  padding: 10px 20px !important;
+  display: inline-block !important;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 0px !important;
+}
+
+.ground-effect-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
+}
+
+.ground-effect-div1 {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ground-effect-div2 {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

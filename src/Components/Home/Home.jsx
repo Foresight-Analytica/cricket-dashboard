@@ -1,32 +1,31 @@
-import './Home.css'
-
+import "./Home.css";
 
 const Home = () => {
-    return (
-        <div className="home">
-            <div className="title" style={{ gridColumn: '1 / span 4'}}>
-                Cricket Dashboard
-            </div>
-            <div className="card" style={{ gridColumn: '1 / span 4', gridRow: '2/ span 2' }}>
-                Live Match
-            </div>
-            <div className="card" style={{  gridColumn: '1 / span 2', gridRow: '4' }}>
-                Score Prediction
-            </div>
-            <div className="card " style={{  gridColumn: '3 / span 2', gridRow: '4' }}>
-                Win Probability
-            </div>
-            <div className="card" style={{ gridRow: '1 / span 2'}}>
-                High Impact Moment Analysis
-            </div>
-            <div className="card" style={{ gridRow: '3' }}>
-                Team Composition
-            </div>
-            <div className="card" style={{ gridRow: '4' }}>
-                Ground Effect - Home Advantage
-            </div>
-        </div>
-    )
-}
+  return (
+    <div class="home">
+      <div class="div1">
+        <div className="home-card">Live Match</div>
+      </div>
+      <div class="div2">
+        <div className="title">Cricket Dashboard</div>
+      </div>
+      <div class="div3">
+        <div className="home-card">Score Prediction</div>
+      </div>
+      <div class="div4">
+        <div className="home-card ">Win Probability</div>
+      </div>
+      <div class="div5">
+        <div className="home-card">Ground Effect - Home Advantage</div>{" "}
+      </div>
+      <div class="div6">
+        <div className="home-card">Team Composition</div>
+      </div>
+      <div class="div7">
+        <div className="home-card">High Impact Moment Analysis</div>
+      </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

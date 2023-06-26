@@ -6,20 +6,22 @@
   --purple: linear-gradient(180deg, #BB67FF 0%, #C484F3 100%);
   --pink: #FF919D;
   --blue : #2b3292;
-  --glass: rgba(255, 255, 255, 0.54);
+  --glass: rgba(255, 255, 255, 0.5);
+  --cardBg: rgba(255, 255, 255, 0.5);
   --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
   --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
-  --activeItem: #99d5f754;
+  --activeItem: #21a4fc54;
 }
 
 .App {
   color: var(--black);
-  background: linear-gradient(
+  /* background: linear-gradient(
     106.37deg,
-    #bceaff 29.63%,
+    #d2d8f8 29.63%,
     #cfd8ff 51.55%,
     #c6cdf3 90.85%
-  );
+  ); */
+  background: linear-gradient(90deg, rgba(81,140,255,1) 0%, rgba(187,255,220,1) 31%, rgba(0,212,255,1) 100%);  
   height: 100vh;
   display: flex;
   align-items: center;
@@ -36,6 +38,7 @@
   gap: 16px;
   grid-template-columns: 15rem auto;
   overflow: hidden;
+  margin: 1rem;
 }
 
 @media screen and (max-width: 1200px) {
@@ -50,3 +53,9 @@
     grid-template-columns: 1fr;
   } 
 }
+
+/* body {
+  background-image: url("https://wallpapercave.com/wp/wp4844553.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
