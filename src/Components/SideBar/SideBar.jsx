@@ -26,7 +26,7 @@ function SideBar() {
                             key={index}
                             onClick={() => handleClick(item.navComponent, index)}
                         >
-                            <img src={item.icon} alt={item.heading} style={{ width: '30px', height: '30px' }} />
+                            <img src={item.icon} alt={item.heading} style={{ width: '2.5rem', height: '2.5rem' }} />
                             <span>
                                 {item.heading}
                             </span>

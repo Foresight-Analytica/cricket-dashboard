@@ -44,7 +44,7 @@
     position: relative;
     transition: all 300ms ease;
     border-radius: 0.7rem;
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: bold;
   }
   
@@ -58,7 +58,7 @@
   }
   .active::before {
     content: "";
-    width: 8px;
+    width: 10px;
     height: 100%;
     background: var(--blue);
     margin-right: calc(1rem - 8px);

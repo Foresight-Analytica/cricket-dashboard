@@ -1,24 +1,24 @@
 .page-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100vh;
   }
   
-  .card {
+.card-high-impact-area {
     width: 100%;
-    max-width: 500px;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 1.5rem;
+    background-color: var(--cardBg) !important;
+    border-radius: 1rem;
+    height: 80%;
+    margin: 2rem;
   }
   
   .card-title {
+    text-align: center;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
   }
   
   .card-content {
