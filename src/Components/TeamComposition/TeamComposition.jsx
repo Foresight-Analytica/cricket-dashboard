@@ -33,11 +33,13 @@ const TeamComposition = () => {
   }
 
   const getNextBatsman1 = async () => {
+    console.log('inning id ='+ inning+', wicket id =' + wicket)
     const data = {
       average: average2,
       sr: strikeRate2,
       total_runs: totalInning2
     };
+    console.log(data)
     try {
       const result = await getNextBestBatsman(inning, wicket,data)
       console.log(result)
