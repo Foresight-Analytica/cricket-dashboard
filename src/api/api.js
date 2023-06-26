@@ -123,3 +123,13 @@ export const highImpactWicketFalling = async (data) => {
     throw error;
   }
 }
+
+export const fetchRemainingScore = async (over) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/next_over_remaining_score?over_id=${over}`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
