@@ -58,3 +58,27 @@ export const fetchWinPredictionSecondInningOverById = async (matchId, overId) =>
     throw error;
   }
 };
+
+export const fetchNextBestBatsman = async (inningId, wicketId) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/match/next-best-batsman/${inningId}/${wicketId}`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
+export const getNextBestBatsman = async (inningId, wicketId, data) => {
+  try {
+    const response = await axios.post(
+      `${BASE_URL}/match/next-best-batsman/${inningId}/${wicketId}`,
+      data
+    );
+    return response.data.Impact;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
