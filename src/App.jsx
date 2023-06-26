@@ -1,6 +1,5 @@
 
 import './App.css'
-import Home from './Components/Home/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScorePrediction from './Components/ScorePrediction/ScorePrediction';
 import WinProbability from './Components/WinProbability/WinProbability';
@@ -24,7 +23,7 @@ function App() {
             <Route path="/high-impact-moment" element={<HighImpactMoment/>} />
             <Route path="/team-composition" element={<TeamComposition/>} />
             <Route path="/ground-effect" element={<GroundEffect/>} />
-            <Route path="/" exact element={<Home/>} />
+            <Route path="/" exact element={<ScorePrediction/>} />
           </Routes>
         </Router>
       </div>

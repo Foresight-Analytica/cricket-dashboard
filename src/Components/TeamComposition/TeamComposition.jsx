@@ -61,11 +61,11 @@ const TeamComposition = () => {
   };
 
   return (
-    <div class="team-composition-grid">
-      <div class="team-composition-div1">
+    <div className="team-composition-grid">
+      <div className="team-composition-div1">
         <div className="card-1">
           <h3 className="card-title">Match Situation</h3>
-          <table class="blueTable">
+          <table className="blueTable">
             <tbody>
               <tr>
                 <td>
@@ -134,10 +134,10 @@ const TeamComposition = () => {
           )}
         </div>
       </div>
-      <div class="team-composition-div2">
+      <div className="team-composition-div2">
         <div className="card-team-composition">
           <h3 className="card-title">Batsman 1</h3>
-          <table class="blueTable">
+          <table className="blueTable">
             <tbody>
               <tr>
                 <td>
@@ -200,7 +200,7 @@ const TeamComposition = () => {
 
         <div className="card-team-composition">
           <h3 className="card-title">Batsman 2</h3>
-          <table class="blueTable">
+          <table className="blueTable">
             <tbody>
               <tr>
                 <td>
