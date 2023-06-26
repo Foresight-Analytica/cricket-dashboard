@@ -82,3 +82,13 @@ export const getNextBestBatsman = async (inningId, wicketId, data) => {
   }
 };
 
+
+export const getGroundBatsmanScore = async (data) => {
+  try {
+    const response = await axios.post(`${BASE_URL}/get-next-batsman-score`, data);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
