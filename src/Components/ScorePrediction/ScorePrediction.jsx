@@ -2,17 +2,24 @@ import { useEffect, useState } from 'react';
 import flag_1 from '../../assets/pak.png'
 import flag_3 from '../../assets/nz.png'
 import './ScorePrediction.css'
+import {fetchRemainingScore} from '../../api/api'
  
 const ScorePrediction = () => {
   const [over, setover] = useState(0)
-  const score = ["140-170", "135-165", "155-185", "145-175", "150-180", "141-161", "139-159", "140-160", "144-164", "151-171",
-    "159-169", "153-163", "160-170", "164-174", "158-168", "166-172", "152-158", "152", "155"]
+  const [score, setscore] = useState('')
+  // const score = ["140-170", "135-165", "155-185", "145-175", "150-180", "141-161", "139-159", "140-160", "144-164", "151-171",
+  //   "159-169", "153-163", "160-170", "164-174", "158-168", "166-172", "152-158", "152", "155"]
 
   useEffect(() => {
     if (over === 19) {
       setover(0);
     }
   }, [over]);
+
+  const handleNext = async () =>{
+    const result = await fetchRemainingScore(over)
+    setscore(result)
+  }
 
   return (
     <div className="score-predictor-container ">
@@ -26,8 +33,11 @@ const ScorePrediction = () => {
             <img className="score-predictor-flag" src={flag_1} alt="Country Flag 2" />
           </div>
           <div className="score-container">
-            <h3 className="score-title">Forecasted Score for Over No {over}: {score[over]}</h3>
-            <button className="next-button" onClick={() => setover(over + 1)}>Next Over</button>
+            <h3 className="score-title">Forecasted Score for Over No {over}: {score}</h3>
+            <button className="next-button" onClick={() => {
+              setover(over + 1)
+              handleNext()
+            }}>Next Over</button>
           </div>
         </div>
       </div>
