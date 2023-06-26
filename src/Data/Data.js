@@ -1,4 +1,3 @@
-import liveIcon from '../assets/icons/live.png';
 import scoreboardIcon from '../assets/icons/scoreboard.png';
 import trophyIcon from '../assets/icons/trophy.png';
 import momentIcon from '../assets/icons/moment.png';
@@ -7,19 +6,9 @@ import groundIcon from '../assets/icons/ground.png';
 
 export const SideBarData = [
   {
-    icon: liveIcon,
-    heading: 'Live Match',
-    navComponent: '/'
-  },
-  {
     icon: scoreboardIcon,
     heading: 'Score Predictor',
     navComponent: '/score-prediction'
-  },
-  {
-    icon: trophyIcon,
-    heading: 'Win Predictor',
-    navComponent: '/win-probability'
   },
   {
     icon:momentIcon,
@@ -27,13 +16,18 @@ export const SideBarData = [
     navComponent: '/high-impact-moment'
   },
   {
+    icon: trophyIcon,
+    heading: 'Win Predictor',
+    navComponent: '/win-probability'
+  },
+  {
     icon: compositionIcon,
-    heading: 'Team Composition Analysis',
+    heading: 'Next Best Batsman',
     navComponent:"/team-composition"
   },
   {
     icon: groundIcon,
-    heading: 'Ground Effect Analysis',
+    heading: 'Player-Ground Analysis',
     navComponent:"/ground-effect"
   }
 ];

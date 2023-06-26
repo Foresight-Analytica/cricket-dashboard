@@ -92,3 +92,34 @@ export const getGroundBatsmanScore = async (data) => {
     throw error;
   }
 };
+
+export const highImpactBoundaries = async (data) => {
+  try {
+    const response = await axios.post(`${BASE_URL}/predict_high_impact_boundaries`, data);
+    return response.data;   
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+
+export const highImpactBoundaryPercentage = async (data) => {
+  try {
+    const response = await axios.post(`${BASE_URL}/predict_high_impact_boundary_percentage`, data);
+    return response.data;   
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
+
+export const highImpactWicketFalling = async (data) => {
+  try {
+    const response = await axios.post(`${BASE_URL}/predict_high_impact_wicket_falling`, data);
+    return response.data;   
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+}
